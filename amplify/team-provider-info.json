@@ -1,0 +1,15 @@
+{
+    "macos": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-youtubealex-macos-200759-authRole",
+            "UnauthRoleArn": "arn:aws:iam::903750697586:role/amplify-youtubealex-macos-200759-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::903750697586:role/amplify-youtubealex-macos-200759-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-youtubealex-macos-200759-deployment",
+            "UnauthRoleName": "amplify-youtubealex-macos-200759-unauthRole",
+            "StackName": "amplify-youtubealex-macos-200759",
+            "StackId": "arn:aws:cloudformation:us-east-2:903750697586:stack/amplify-youtubealex-macos-200759/31df2de0-324a-11ea-91e9-06ecdd631b8a",
+            "AmplifyAppId": "d2bz0wnaw6e59t"
+        }
+    }
+}

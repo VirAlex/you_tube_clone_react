@@ -7,6 +7,7 @@
     "axios": "^0.19.0",
     "bufferutil": "^4.0.1",
     "express": "^4.17.1",
+    "gh-pages": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.3.0",
@@ -14,7 +15,7 @@
     "ws": "^7.2.1"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,5 +52,5 @@
   "bugs": {
     "url": "https://github.com/VirAlex/you_tube_clone_react/issues"
   },
-  "homepage": "https://github.com/VirAlex/you_tube_clone_react#readme"
+  "homepage": "https://VirAlex.github.io/you_tube_clone_react"
 }
