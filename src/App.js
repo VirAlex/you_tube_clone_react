@@ -2,13 +2,27 @@ import React from 'react';
 
 import { Grid } from '@material-ui/core';
 
-import {SearchBar, VideoDetail, VideoList} from './components';
+import {SearchBar, VideoDetail, VideoList, VideoItem } from './components';
 
 import youtube from './api/youtube';
 
 class App extends React.Component {
+  state = {
+    videos: [],
+    selectVideo: null,
+  }
+
+  componentDidMount(){
+    this.handleSubmit('le wagon')
+  }
+
+  onVideoSelect = (video) => {
+    this.setState({selectedVideo: video })
+  }
+
+
   handleSubmit = async (searchTerm) => {
-    const response = await youtube.get('search', {
+    const response = await youtube.get('', {
       params:{
       part: 'snippet',
       maxResults: 5,
@@ -16,9 +30,10 @@ class App extends React.Component {
       q: searchTerm,
     }
   });
-  console.log(response)
+  this.setState({ videos: response.data.items, selectedVideo: response.data.items[0]});
 }
   render(){
+    const { selectedVideo, videos } = this.state;
     return (
       <Grid justify="center" container spacing={10}>
         <Grid item xs={12}>
@@ -27,10 +42,10 @@ class App extends React.Component {
               <SearchBar onFormSubmit={this.handleSubmit} />
             </Grid>
             <Grid item xs={8}>
-              <VideoDetail />
+              <VideoDetail video={ selectedVideo  }/>
             </Grid>
             <Grid item xs={4}>
-              {/* Video List */}
+              <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>
             </Grid>
           </Grid>
         </Grid>
