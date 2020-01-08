@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Grid } from '@material-ui/core';
 
-import {SearchBar, VideoDetail, VideoList, VideoItem } from './components';
+import {SearchBar, VideoDetail, VideoList} from './components';
 
 import youtube from './api/youtube';
 
