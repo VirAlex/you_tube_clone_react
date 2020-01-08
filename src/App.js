@@ -6,6 +6,8 @@ import {SearchBar, VideoDetail, VideoList, VideoItem } from './components';
 
 import youtube from './api/youtube';
 
+
+
 class App extends React.Component {
   state = {
     videos: [],
@@ -22,11 +24,12 @@ class App extends React.Component {
 
 
   handleSubmit = async (searchTerm) => {
+    const API_KEY = process.env.REACT_APP_KEY;
     const response = await youtube.get('', {
       params:{
       part: 'snippet',
       maxResults: 5,
-      key: 'AIzaSyC0tfiLjP002YyFtwMx0dev1q8oXTOcp68',
+      key: API_KEY,
       q: searchTerm,
     }
   });
